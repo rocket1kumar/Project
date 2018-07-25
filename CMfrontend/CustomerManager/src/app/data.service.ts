@@ -10,26 +10,27 @@ import { HttpClient } from '@angular/common/http';
 export class DataService {
 
   constructor( private http: HttpClient) { }
+	hosturl='http://192.168.10.154:8080';
 
 // getData():Customer[]{
 // 	return CUSTOMERS;
 // }
 
 saveCustomer(customer){
-	return this.http.post("http://192.168.10.154:8080/api/savecustomer",customer);//.map(res => { return res;});
+	return this.http.post(hosturl+"/api/savecustomer",customer);//.map(res => { return res;});
 }
 
 getData(){
-	return this.http.get("http://192.168.10.154:8080/api/customers");
+	return this.http.get(hosturl+"/api/customers");
 
 }
 
 deleteCustomerById(id){
-	 return this.http.delete("http://192.168.10.154:8080/api/delete/"+id);
+	 return this.http.delete(hosturl+"/api/delete/"+id);
 }
 
 getDataById(id){
-	return this.http.get("http://192.168.10.154:8080/api/customer/"+id);
+	return this.http.get(hosturl+"/api/customer/"+id);
 }
 
 }
