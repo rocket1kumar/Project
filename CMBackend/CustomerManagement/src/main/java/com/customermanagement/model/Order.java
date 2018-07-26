@@ -1,7 +1,7 @@
 package com.customermanagement.model;
 
 import org.springframework.data.annotation.Id;
-
+ // Creating order Document
 public class Order {
 
 	private String itemname;
