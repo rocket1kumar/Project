@@ -12,9 +12,7 @@ export class DataService {
   constructor( private http: HttpClient) { }
 	hosturl='http://192.168.10.154:8080';
 
-// getData():Customer[]{
-// 	return CUSTOMERS;
-// }
+
 
 saveCustomer(customer){
 	return this.http.post(hosturl+"/api/savecustomer",customer);//.map(res => { return res;});
