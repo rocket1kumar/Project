@@ -15,20 +15,20 @@ export class DataService {
 
 
 saveCustomer(customer){
-	return this.http.post(hosturl+"/api/savecustomer",customer);//.map(res => { return res;});
+	return this.http.post(this.hosturl+"/api/savecustomer",customer);//.map(res => { return res;});
 }
 
 getData(){
-	return this.http.get(hosturl+"/api/customers");
+	return this.http.get(this.hosturl+"/api/customers");
 
 }
 
 deleteCustomerById(id){
-	 return this.http.delete(hosturl+"/api/delete/"+id);
+	 return this.http.delete(this.hosturl+"/api/delete/"+id);
 }
 
 getDataById(id){
-	return this.http.get(hosturl+"/api/customer/"+id);
+	return this.http.get(this.hosturl+"/api/customer/"+id);
 }
 
 }
